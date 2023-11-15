@@ -1,0 +1,104 @@
+.navbar a{
+    color:  #5C4033;
+	border-style: outset;
+	border-color:#7f5539 ;
+	background-color: #9c6644 ;
+	border-width: 10px;
+	margin-left: 40px;
+	text-decoration: none;
+	text-align: center;
+	font-size: 20px;
+	padding: 30px;
+    font-family:cursive;
+    margin: 30px;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/03/21/93/72/1000_F_321937279_JSJRCD0K5z6Ed0TO8litJGTWq0wOJ0qT.jpg
+
+);
+
+    
+
+}
+
+a:hover{
+     background-color:#a67b5b ;
+     color:#e6ccb2 ;
+}
+
+li{
+    
+	display: inline-block;
+	float: right;
+
+}
+
+.navbar ul{
+	overflow: hidden;
+	
+	list-style-type: none;
+	position: fixed;
+	
+	top: 15px;
+	
+	
+}
+
+
+
+h1{
+	color: antiquewhite;
+	margin-left: 540px;
+	margin-top: 280px;
+	font-size: 100px;
+}
+
+h2{
+
+	text-align: center;
+	font-size: 40px;
+	color: #fefae0;
+}
+
+pre{
+    
+	color: white;
+	text-align: center;
+	font-size: 30px;
+}
+
+.section{
+	
+
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+     margin-left:0px;
+
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    animation: change 30s infinite ease-in-out;
+    animation-iteration-count: infinite;
+    position: fixed;
+      
+      z-index: 0;
+}
+
+
+@keyframes change{
+    0%
+    { background-image: url('https://wallpapercave.com/wp/wp9006906.jpg') }
+    20%
+    {background-image: url('https://images5.alphacoders.com/128/1281346.jpg')}
+    40%
+    {background-image: url('https://images.wallpaperscraft.com/image/single/castle_autumn_architecture_134648_1920x1080.jpg')}
+    60%
+    {background-image: url('https://wallpaperaccess.com/full/155888.jpg')}
+    80%
+    {background-image: url('https://cdn.wallpapersafari.com/72/24/ofWiRX.jpg')}
+    100%
+    {background-image: url('https://i.pinimg.com/originals/bf/76/2a/bf762a65020b05b6d3ff7dde49cf630e.jpg')}
+
+}
+
