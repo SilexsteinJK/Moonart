@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+<header>
+
+  <!-- First container -->
+  <div class="container container_solid">
+    <div class="title_wrapper">
+      <h1> Why Da Vinci ?</h1>
+    </div>
+  </div>
+
+  <!-- Second container -->
+  <div class="container container_image" aria-hidden="true">
+    <div class="title_wrapper">
+      <h1> Why Da Vinci ?</h1>
+    </div>
+  </div>
+
+</header>
+
+<section>
+  <h2>Why Leonardo Da Vinci and not another artist ? </h2>
+  
+
+  <p>Leonardo da Vinci is often considered one of the greatest artists in history, and there are several reasons why he stands out among others. Here are a few factors that contribute to his prominence:</p>
+
+  <ol style="font-size: 30px;">
+    <li><strong>Versatility:</strong> Leonardo da Vinci was a polymath—a person with expertise in a wide range of subjects. He excelled not only in art but also in science, anatomy, engineering, and various other fields. His ability to combine artistic creativity with scientific inquiry and innovation set him apart from many other artists of his time.</li>
+
+    <li><strong>Mona Lisa and The Last Supper:</strong> Two of Leonardo's most famous works, the Mona Lisa and The Last Supper, are iconic masterpieces that have achieved global recognition. The Mona Lisa, in particular, is one of the most famous and enigmatic paintings in the world.</li>
+
+    <li><strong>Innovations in Art:</strong> Leonardo da Vinci made significant contributions to the development of art techniques and methods. His use of chiaroscuro (the use of light and shadow), sfumato (blurring of outlines), and his meticulous attention to detail were groundbreaking and influenced generations of artists.</li>
+
+    <li><strong>Scientific Contributions:</strong> Leonardo's notebooks are filled with detailed sketches and observations on anatomy, engineering, and natural phenomena. His curiosity and scientific approach to his art set him apart from many of his contemporaries.</li>
+
+    <li><strong>Influence on the Renaissance:</strong> Leonardo da Vinci was a key figure in the Italian Renaissance, a period of great cultural and intellectual growth. His ideas and artistic innovations contributed to the broader cultural and intellectual movements of the time.</li>
+  </ol>
+
+
+
+  <style type="text/css">
+    
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&display=swap');
+
+header {
+  height: 200vh;
+}
+
+.container {
+  /* hide fixed overflow contents */
+  clip: rect(0, auto, auto, 0);
+
+  /* does not work if overflow = visible */
+  overflow: hidden;
+
+  /* only works with absolute positioning */
+  position: absolute;
+
+  /* Make sure containers are full-width and height */
+  height: 100vh;
+  left: 0;
+  width: 100%;
+  
+  
+  /* safari hack */
+  -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+}
+
+.container_solid {
+  background: rosybrown;
+  
+  /* position this container at the top of its parent element */
+  top: 0;
+}
+
+.title_wrapper {
+  position: fixed;
+  display: block;  
+  margin: auto;
+  width: 100%;
+  /* center the text wrapper vertically */
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.title_wrapper h1 {
+  text-align: center;
+  font-size: 64px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+}
+
+.container_solid .title_wrapper h1 {
+  /* the text background */
+  background: url(https://c4.wallpaperflare.com/wallpaper/438/695/801/leonardo-da-vinci-vitruvian-man-artwork-collage-wallpaper-preview.jpg);
+  background-size: 100vw auto;
+  background-position: center;
+  
+  /* clip the text is possible */
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  /* fallback text color */
+  color: black;
+}
+
+.container_image {
+  /* Grab a free image from unsplash */
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/438/695/801/leonardo-da-vinci-vitruvian-man-artwork-collage-wallpaper-preview.jpg);
+  background-size:100vw auto;
+  background-position: center;
+  background-attachment: fixed;
+  
+  /* position the second container below the first container */
+  top: 100vh;
+}
+
+.container_image .title_wrapper h1 {
+  color: white;
+}
+
+section {
+  min-height: 100vh;
+  padding: 2em;
+  margin: auto;
+  max-width: 800px;
+}
+
+section h2 {
+  font-family: 'Fraunces', serif;
+}
+
+section p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+  </style>
+</body>
+</html>
