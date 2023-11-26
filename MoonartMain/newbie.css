@@ -147,7 +147,7 @@ p{
 .lightbox-wrapper {
   display: none;
 /*color of box background-----------------------------*/
-  background-color: #6C3428;
+  background-image: url("https://i.pinimg.com/564x/bc/33/da/bc33da7c4bd8fc2f280d5c5be495a46e.jpg");
   position: fixed;
   top: 0;
   bottom: 0;
@@ -168,7 +168,7 @@ p{
   justify-content: space-between;
   align-items: center;
 /*  color of box header--------------------------------*/
-  background-color: #DFA878;
+  background-image: url("https://i.pinimg.com/564x/bc/33/da/bc33da7c4bd8fc2f280d5c5be495a46e.jpg");
   padding: 1em;
   font-weight: 600;
   text-align: center;
