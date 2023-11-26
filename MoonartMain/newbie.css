@@ -13,7 +13,36 @@ section {
   font-weight: 600;
   color: #777;
 }
+h1{
+  font-family: "Times New Roman", Times, serif;
+font-size: 80px;
+letter-spacing: -1.4px;
+word-spacing: 0px;
+color: #FFFFFF;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: italic;
+font-variant: normal;
+text-transform: capitalize;
+text-align: center;
+text-shadow: 10px 6px 9px #655a10;
 
+}
+h1:hover {
+  font-variation-settings: "wght" 582; 
+  letter-spacing: 10px;
+}
+span{
+
+  color: #33180D;
+}
+p{
+  font-size: 20px;
+  color: whitesmoke;
+  margin-left: 667px;
+  background-color: darkgoldenrod;
+  display: inline-block;
+  font-style: italic;
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
