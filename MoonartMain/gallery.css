@@ -97,7 +97,11 @@
   background: linear-gradient(315deg, #191970, 	#36454F)
 }
 
-
+.container .box:nth-child(5):before,
+.container .box:nth-child(5):after
+{
+  background: linear-gradient(315deg, lightgray, black)
+}
 
 
 
