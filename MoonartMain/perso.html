@@ -78,6 +78,127 @@ creating a vibrant community together!
 
 
 
+
+
+<div class="card1">
+<div class="card">
+    <div class="image">
+      <img src="https://janefriedman.com/wp-content/uploads/2020/09/maisel-daily-practice-honesty-1000x690.jpg"/>
+    </div>
+    <div class="details">
+      <div class="center">
+        <h3>Honesty<br><span>Sincere Art</span></h3>
+        <p>An authenticic dialogue between the artist's soul and the observer's emotions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card2">
+  <div class="card">
+    <div class="image">
+      <img src="https://janefriedman.com/wp-content/uploads/2020/09/maisel-daily-practice-honesty-1000x690.jpg"/>
+    </div>
+    <div class="details">
+      <div class="center">
+        <h3>whimsy<br><span>light-hearted</span></h3>
+        <p>Charming capricious pieces embracing a sense of wonder and delight.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <style type="text/css">
+    .card1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 200px;
+    background: #000;
+    margin-left: -780px;
+}
+
+  .card2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 200px;
+    background: #000;
+    margin-left: -450px;
+}
+
+
+.card .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.card .image img {
+    width: 100%;
+    transition: .5s;
+}
+.card:hover .image img {
+    opacity: .5;
+    transform: translateX(30%);/*100%*/
+}
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;/*100%*/
+    height: 100%;
+
+    background: #ffc107;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.card:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.card .details .center {
+    padding: 20px;
+    text-align: center;
+    background: #B99470;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.card .details .center h3 {
+    margin: 0;
+    padding: 0;
+    color: #5F6F52;
+    line-height: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.card .details .center h3 span {
+    font-size: 14px;
+    background-color: #9da681;
+    color: black;
+
+}
+.card .details .center p {
+    margin: 10px 0;
+    padding: 0;
+    color: #FEFAE0;
+}
+
+
+  </style>
+
+
+
+
+
+
+
+
+
 <style type="text/css">
     
     body{
