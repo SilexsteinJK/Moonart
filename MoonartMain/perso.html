@@ -6,7 +6,7 @@
     <title></title>
 </head>
 <body>
-
+<canvas id="canvas"></canvas>
     <!-- buttonhome-->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
@@ -29,6 +29,8 @@ flex-direction: row;
 align-items: center;
 cursor: pointer;
 text-transform: uppercase;
+margin-top: -940px;
+position: absolute;
 
 }
 
@@ -59,7 +61,7 @@ border: solid 0px #ffffff;
     <i class="glow"></i>
   </div>
 </a>
-
+<h4>Art Values</h4>
 
 <h2>
     About Me 
@@ -101,14 +103,54 @@ creating a vibrant community together!
     </div>
     <div class="details">
       <div class="center">
-        <h3>whimsy<br><span>light-hearted</span></h3>
+        <h3>whimsy<br><span>profound art</span></h3>
         <p>Charming capricious pieces embracing a sense of wonder and delight.</p>
       </div>
     </div>
   </div>
 </div>
 
+<div class="card3">
+  <div class="card">
+    <div class="image">
+      <img src="https://janefriedman.com/wp-content/uploads/2020/09/maisel-daily-practice-honesty-1000x690.jpg"/>
+    </div>
+    <div class="details">
+      <div class="center">
+        <h3>Temporal Flux<br><span>Fluid art</span></h3>
+        <p>The essence of transience, nostalgia, and the ever-changing flow of experiences.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card4">
+  <div class="card">
+    <div class="image">
+      <img src="https://janefriedman.com/wp-content/uploads/2020/09/maisel-daily-practice-honesty-1000x690.jpg"/>
+    </div>
+    <div class="details">
+      <div class="center">
+        <h3>Hyperrealist Harmony<br><span>Meticilous Art</span></h3>
+        <p>Elevating the ordinary with unmatched precision,crafting an immersive surreality.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
   <style type="text/css">
+
+
+body,
+html {
+
+  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/403/523/desktop-wallpaper-white-space-space.jpg');
+  
+}
+canvas{
+  filter: blur(1px);
+}
+
     .card1 {
     position: absolute;
     top: 50%;
@@ -129,6 +171,30 @@ creating a vibrant community together!
     height: 200px;
     background: #000;
     margin-left: -450px;
+}
+
+  .card3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 200px;
+    background: #000;
+    margin-left: -450px;
+    margin-top: 260px;
+}
+
+.card4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 200px;
+    background: #000;
+    margin-left: -780px;
+    margin-top: 260px;
 }
 
 
@@ -201,9 +267,7 @@ creating a vibrant community together!
 
 <style type="text/css">
     
-    body{
-  background-image: url("https://cdn10.bigcommerce.com/s-ut8rovqboe/products/21428/images/37141/%2524_57__58419.1652832299.500.750.JPG?c=2");
-}
+
 
 a{
   color: #111
@@ -279,21 +343,128 @@ h1{
 
 h2{
 
-margin-top: 180px;
+margin-top: -800px;
 font-size: 55px;
 margin-left: 1380px;
 color: saddlebrown;
 }
 
+
+
 p{
 
     margin-left: 1260px;
     font-size: 25px;
-    color: black;
+    color: whitesmoke;
     font-style: italic;
     font-family: serif;
 }
 </style>
 
+
+<script type="text/javascript">
+	
+	let c = init("canvas"),
+  w = (canvas.width = window.innerWidth),
+  h = (canvas.height = window.innerHeight);
+//initiation
+
+class firefly{
+  constructor(){
+    this.x = Math.random()*w;
+    this.y = Math.random()*h;
+    this.s = Math.random()*2;
+    this.ang = Math.random()*2*Math.PI;
+    this.v = this.s*this.s/4;
+  }
+  move(){
+    this.x += this.v*Math.cos(this.ang);
+    this.y += this.v*Math.sin(this.ang);
+    this.ang += Math.random()*20*Math.PI/180-10*Math.PI/180;
+  }
+  show(){
+    c.beginPath();
+    c.arc(this.x,this.y,this.s,0,2*Math.PI);
+    c.fillStyle="#fddba3";
+    c.fill();
+  }
+}
+
+let f = [];
+
+function draw() {
+  if(f.length < 100){
+    for(let j = 0; j < 10; j++){
+     f.push(new firefly());
+  }
+     }
+  //animation
+  for(let i = 0; i < f.length; i++){
+    f[i].move();
+    f[i].show();
+    if(f[i].x < 0 || f[i].x > w || f[i].y < 0 || f[i].y > h){
+       f.splice(i,1);
+       }
+  }
+}
+
+let mouse = {};
+let last_mouse = {};
+
+canvas.addEventListener(
+  "mousemove",
+  function(e) {
+    last_mouse.x = mouse.x;
+    last_mouse.y = mouse.y;
+
+    mouse.x = e.pageX - this.offsetLeft;
+    mouse.y = e.pageY - this.offsetTop;
+  },
+  false
+);
+function init(elemid) {
+  let canvas = document.getElementById(elemid),
+    c = canvas.getContext("2d"),
+    w = (canvas.width = window.innerWidth),
+    h = (canvas.height = window.innerHeight);
+  c.fillStyle = "rgba(30,30,30,1)";
+  c.fillRect(0, 0, w, h);
+  return c;
+}
+
+window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback);
+    }
+  );
+});
+
+function loop() {
+  window.requestAnimFrame(loop);
+  c.clearRect(0, 0, w, h);
+  draw();
+}
+
+window.addEventListener("resize", function() {
+  (w = canvas.width = window.innerWidth),
+  (h = canvas.height = window.innerHeight);
+  loop();
+});
+
+loop();
+setInterval(loop, 1000 / 60);
+</script>
+
+
+
+
+
 </body>
 </html>
+
